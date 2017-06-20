@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>http://www.charity-charities.org</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+     
+     #sos ul a{
+    color:white;
+    font-size: 18px;
+    padding: 5px;
+    float: left;
+    display:block;
+    text-decoration: none;
+    }
+    #sos ul li{
+    display: inline-block;
+    border-right: 1px solid #fff;
+    padding: 1%;
+    margin: 0px;
+    
+    }
+    #sos > ul > li:nth-child(8){
+         border-right: none;
+    }
+
+    #sos > ul > li{
+        width: 80px;
+        border-right: none; 
+    }
+    #sos > ul > li a{
+        padding: 5px;
+        width: 60px;
+        border: 2px solid darkblue;
+        border-radius: 20px;
+        text-align: center;
+         background: linear-gradient(darkblue, blue); 
+    }
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+     .col-sm-3 > a {
+          text-decoration: none;
+      }
+      
+      .col-sm-2 > a {
+          text-decoration: none;
+      }
+
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      min-height: 200px;
+    }
+      
+      .list-group > li {
+			background-repeat: no-repeat;
+			background-position: center right;
+			margin: 10px;
+			padding: 5px;
+		}
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      } 
+    }
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <div class="container-fluid">
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="nav navbar-nav" href="donate.html" ><img src="image/charity.jpeg" style="height:60px;width:100px;color:#555; margin-top:px; margin-right:5px;"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="http://www.charity-charities.org/index.htm"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="http://www.charity-charities.org/add.php">ADD A CHARITY <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="http://www.charity-charities.org/add.php">Submit A Site	</a></li>
+            <li><a href="http://www.charity-charities.org/charities/index.html">Find A Charity</a></li>
+            </ul>
+            </li>
+            <li><a href="http://www.charity-charities.org/ActionAlertCenter.html">ACTION CENTER</a></li>
+            <li><a href="http://www.charity-charities.org/volunteering/index.html">VOLUNTEER</a></li>
+            
+            <li><a href="http://www.charity-charities.org/contact.php">CONTACT</a></li>
+            <li><a href="http://www.charity-charities.org/support.htm">SUPPORT</a></li>
+            <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="http://www.charity-charities.org/news/index.php">NEWS <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+            <li><a href="http://www.charity-charities.org/news/international-world/index.php">World</a></li>
+            <li><a href="http://www.charity-charities.org/news/environmental/index.php">Environment</a></li>
+            <li><a href="http://www.charity-charities.org/news/community-services/index.php">Community</a></li>
+            <li><a href="http://www.charity-charities.org/news/health-medical/index.php">Health</a></li>
+            <li><a href="http://www.charity-charities.org/news/animals-wildlife/index.php">Animals</a></li>
+            <li><a href="http://www.charity-charities.org/news/celebrities-celebrity/index.php">People	</a></li>
+
+            </ul> 
+            </li>    
+        </ul>
+        <ul class="nav navbar-nav navbar-right" style="margin-top:12px;">
+                <li ><button class="btn btn-sm" style="margin-right:10px;background:#000; color:#fff;" type="button" onclick="loginfo(this)"><span class="glyphicon glyphicon-user" ></span> Sign Up</button></li>
+                <li>
+            <button class="btn  btn-sm" style="margin-right:10px;background:#000; color:#fff;"
+  id="signing" type="button" onclick="loginIn(this)"><span class="glyphicon glyphicon-log-in" ></span> Login</button></li>
+        </ul>
+        <ul>
+            
+            <div class="dropdown navbar-right" style="margin:12px;">
+                  <button class="btn  btn-sm dropdown-toggle" type="button" data-toggle="dropdown" style="background:#000;color:#fff;">Language
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+
+                        <li><a href="http://www.charity-charities.org/sp/ngos-caridades/index.html">Espanol</a></li>
+                        <li><a href="http://www.charity-charities.org/ge/Deutschland-nachstenliebe/Deutschland.html">Deutsch</a></li>
+                        <li><a href="http://www.charity-charities.org/fr/France-charites/France.html">Francais</a></li>
+                        <li><a href="http://www.charity-charities.org/it/Italia-ngos/Italia.html">Italiano</a></li> 
+                        <li><a href="http://www.charity-charities.org/po/Brasil-daridades/Brasil.html">Portugues</a></li>
+                        <li><a href="http://www.charity-charities.org/du/Nederland-ngos/Nederland.html">Dutch</a></li>  
+
+                  </ul>
+            </div>
+                
+        </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="margin-top:120px;">
+    <div class="row">
+      <div class="col-sm-8">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-bottom:20px;">
+          <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+                <li data-target="#myCarousel" data-slide-to="5"></li>
+         </ol>
+
+          <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+                <div class="item active">
+
+                  <img src="image/pov1.jpg" width="100%" height="100%">
+
+            <!--
+                        <div class="carousel-caption">
+                             <p>Luthur</p>
+                       </div>    
+            -->
+                </div>
+
+                <div class="item">
+                  <img src="image/pov2.jpg" width="100%" height="100%">
+                </div>
+
+                <div class="item">
+                  <img src="image/pov3.jpg"  width="100%" height="100%">
+                </div>
+
+                <div class="item">
+                  <img src="image/pov4.jpg"  width="100%" height="100%">
+                </div>
+
+                <div class="item">
+                  <img src="image/pov5.jpg"  width="100%" height="100%">
+                </div>
+
+                <div class="item">
+                  <img src="image/pov6.jpg"  width="100%" height="100%">
+                </div>
+
+                <div class="item">
+                  <img src="image/pov7.jpg"  width="100%" height="100%">
+                </div>
+
+            </div>
+
+          <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <div class="text-center">
+
+              <div class="col-md-8 ">
+
+                    
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/iMTk-686npc" frameborder="0" allowfullscreen></iframe>
+            
+
+              </div>
+              <div  class="col-md-4 " style="margin-bottom:10px;">
+
+                <form name="login">
+                  <div id="login" class="form-signin login" style="padding-top:40px;">
+                        <label for="userId" class="sr-only">User Name:</label>
+                        <input id="username" type="userId" class="form-control" name="userId" placeholder="User Name" required autofocus><br>
+
+                        <label for="password" class="sr-only">Password:</label>
+                        <input type="password" class="form-control" name="password" placeholder="Password" required><br>
+                        <label>
+                            <input type="checkbox" value="remember-me"> Remember me 
+                        </label>  
+                  </div>
+                    <input  type="button" class="btn btn-lg btn-primary btn-block" id="sign" onclick="check(this.form)" value="Sign in" />
+                </form><br>
+
+             </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="well">
+            <h4>Headlines</h4>
+            <p><a href="http://www.charity-charities.org/news/international-world/index.php" style="color:#000;">World</a>: <a href="http://www.charity-charities.org/news.php?artid=4197240">UNICEF boosts girl child education.</a></p>
+            <p><a href="http://www.charity-charities.org/news/health-medical/index.php" style="color:#000;">Health</a>: <a href="http://www.charity-charities.org/news.php?artid=4197232">WHO &amp; partners respond to Ebola in DRC.</a></p>
+            <p><a href="http://www.charity-charities.org/news/environmental/index.php" style="color:#000;">Earth</a>: <a href="http://www.charity-charities.org/news.php?artid=4163495">US signs treaty to protect the Arctic.</a></p>
+            <p><a href="http://www.charity-charities.org/news/community-services/index.php" style="color:#000;">Local</a>: <a href="http://www.charity-charities.org/news.php?artid=4197242">Free summer meals for children.</a></p> 
+            <p><a href="http://www.charity-charities.org/news/animals-wildlife/index.php" style="color:#000;">Animal</a>: <a href="http://www.charity-charities.org/news.php?artid=4197241">HK announces bill to ban ivory trade.</a></p> 
+            <p><a href="http://www.charity-charities.org/news/celebrities-celebrity/index.php" style="color:#000;">Celebs</a>: <a href="http://www.charity-charities.org/news.php?artid=4197226">Big Sean helps homeless students.</a></p> 
+            <p><a href="http://www.charity-charities.org/news/international-world/index.php" style="color:#000;">World</a>: <a href="http://www.charity-charities.org/news.php?artid=4194117">WFP helps fight stunting in Indonesia.</a></p> 
+            <p><a href="http://www.charity-charities.org/news/environmental/index.php" style="color:#000;">Earth</a>: <a href="http://www.charity-charities.org/news.php?artid=4150135">Drilling &amp; fracking plans halted in CA.</a></p>
+            <a style="float:right;" href="http://www.charity-charities.org/news/index.php">View All News >> </a>
+        </div>
+        <div class="well">
+            <h4>About Charity Vault</h4>
+            <p><a>The Action Center </a>lists top trending causes and the organizations committed to those efforts with daily updates of their progress.</p>
+            <p><a>Charities In The News </a>lists over 80 news articles a day with links to each organization's website, charity profile and related news.</p>
+            <p><a>The Charity Directory</a>lists more than 100,000 organizations around the world based on their recent activity.</p>
+            <p>To stay up to date on the causes that matter most, please follow us below.</p>
+        </div>
+        <div class="well">
+           <div id="sos" class="text-center">
+               <h4>Charity Vault</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/charityvault"class="fa fa-facebook"></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/charityvault" class="fa fa-twitter"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </li>
+                </ul>
+           </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+</div>
+
+    <div class="container text-center">    
+  <h3>Top Stories</h3>
+  <br>
+  <div class="row">
+<div class="col-md-3">
+    <div class="thumbnail">
+        <img src="image/pov44.jpg" alt="Lights" style="width:100%">
+        <div class="caption">
+            <h3><a href="http://www.charity-charities.org/news.php?artid=4207726">Global Polio Eradication Initiative</a></h3> 
+          <p class="text-justify">NEW YORK CITY, NEW YORK (unicef.org) - Global health leaders gathered at the Rotary Convention in Atlanta to reaffirm their commitment to eradicating polio and pledge US$ 1.2 billion to finance efforts to end the disease.</p>
+          <p class="text-justify">Thirty years ago, polio paralyzed more than 350,000 children each year in more than 125 countries around the world. Thanks to the extraordinary efforts of governments, health workers, donors and the partners of the Global Polio Eradication Initiative (GPEI), a public-private partnership dedicated to ending the disease, the highly contagious virus has now been eliminated in all but three countries: Afghanistan, Nigeria and Pakistan. There have been only five cases to date in 2017.</p>
+        </div>        
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="thumbnail">
+        <img src="image/pov55.jpg" alt="Nature" style="width:100%">
+        <div class="caption">
+          <h3><a href="http://www.charity-charities.org/news.php?artid=4207748">Food Bank of Central and Eastern North Carolina</a></h3> 
+          <p class="text-justify">RALEIGH, NORTH CAROLINA (newsobserver.com) - For children who receive free and reduced-price lunches during the school year, having enough food becomes more challenging during summer break.</p>
+          <p class="text-justify">In the Casa de Luna apartment complex in northeast Raleigh, those kids can come every Tuesday and receive a free, nutritious lunch — part of a coordinated effort across Wake County to feed tens of thousands of kids at risk of going hungry this summer.</p>
+        </div>        
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="thumbnail">
+        <img src="image/pov66.jpg" alt="Fjords" style="width:100%">
+        <div class="caption">
+          <h3><a href="http://www.charity-charities.org/news.php?artid=4207733">Lewa Wildlife Conservancy</a></h3> 
+          <p class="text-justify">NAIROBI, KENYA (nation.co.ke) - No rhino has been poached in the Lewa Wildlife Conservancy in Meru in the past three years due to good human-wildlife relations that promote conservation.</p>
+          <p class="text-justify">The Lewa Wildlife Conservancy Impact Report for 2016 noted that 14 new rhinos were born last year in the Lewa-Borana landscape, an indication of the concerted efforts between the conservancy and local communities in protecting endangered species.</p>
+        </div>        
+    </div>
+  </div>
+  <div class="col-md-3">
+        <div class="thumbnail">
+        <img src="image/pov77.jpg" alt="Fjords" style="width:100%">
+        <div class="caption">
+              <h3><a href="http://www.charity-charities.org/news.php?artid=4207745">International Organization for Migration</a></h3> 
+              <p class="text-justify">GENEVA, SWITZERLAND (iom.int) - According to IOM’s Displacement Tracking Matrix (DTM) Emergency Tracking over 25,000 individuals have been displaced from west Mosul in the last five days alone as fighting between ISIL and Iraqi forces draw closer to the old city where an estimated 118,000 people are believed to be entrapped.</p>
+              <p class="text-justify">A large percentage of those escaping are children.
+              In IOM’s constructed emergency site in Qayara’s airstrip, of the 49,564 internally displaced persons (IDPs), 28,387 are children (14,336 boys and 14,051 girls).</p>
+        </div>        
+    </div>
+      </div>
+  </div>
+  <hr>
+</div>
+
+    <div class="container text-center">    
+          <h3>Action Center</h3>
+          <br>
+          <div class="row">
+            <div class="col-sm-2">
+              <img src="image/climate.jpg" class="img-responsive img-circle" style="width:100%" alt="Image">
+              <h4><a href="http://www.charity-charities.org/action-alerts-environment-climate-change.html">Climate</a></h4>
+            </div>
+            <div class="col-sm-2"> 
+              <img src="image/ocean.jpg" class="img-responsive img-circle" style="width:100%" alt="Image">
+              <h4><a href="http://www.charity-charities.org/action-alerts-environment-save-our-oceans.html">Ocean</a></h4>    
+            </div>
+            <div class="col-sm-2"> 
+              <img src="image/forest.jpg" class="img-responsive img-circle" style="width:100%" alt="Image">
+              <h4><a href="http://www.charity-charities.org/action-alerts-environment-stop-deforestation.html">Deforestation</a></h4>
+            </div>
+            <div class="col-sm-2"> 
+              <img src="image/wildlife.jpg" class="img-responsive img-circle" style="width:100%" alt="Image">
+              <h4><a href="http://www.charity-charities.org/action-alerts-environment-stop-pollution.html">Pollution</a></h4>
+            </div> 
+            <div class="col-sm-2 "> 
+              <img src="image/pollution.jpg" class="img-responsive img-circle" style="width:100%" alt="Image">
+              <h4><a href="http://www.charity-charities.org/action-alerts-environment-wildlife-conservation.html">Wildlife</a></h4>
+            </div>     
+            <div class="col-sm-2"> 
+                <a href="https://www.paypal.com/us/webapps/mpp/account-selection"><img src="image/paydonate.jpeg" class="img-responsive img-rounded" style="width:100%" alt="Image"></a>
+                <div style="margin-top:10px;">
+
+                   <!-- Trigger the modal with a button -->
+                    <a href="donate.html" type="button" class="btn btn-info btn-block" onclick="donate(this)">Donate</a>
+
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+
+                        <!-- Modal content-->
+                          <div class="modal-body">
+                            <div class="modal-content text-left">
+                              <div class="modal-header">
+                                    <a href="https://donate.charity.org/?utm_source=global-impact&amp;utm_campaign=global_impact_responds#contact"><span class="glyphicon glyphicon-link"></span></a>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title">Contact Us</h4>
+                              </div>
+                              <div class="modal-body text-left">
+
+                                    <p style="line-height: 20.8px;">Checks can be directly mailed to:</p>
+
+                                    <p style="line-height: 20.8px;">Global Impact<br>
+                                    1199 North Fairfax Street, Suite 300<br>
+                                    Alexandria, VA 22314</p>
+
+                                    <p style="line-height: 20.8px;">For wire instructions, please contact:&nbsp;<a href="mailto:Mark.Milligan@charity.org">Mark.Milligan@charity.org</a></p>
+
+                                    <hr style="line-height: 20.8px;">
+                                    <p style="line-height: 20.8px;">For finance and billing related questions, please contact Global Impact at&nbsp;<a href="mailto:mark.milligan@charity.org" target="_blank">mark.milligan@charity.org</a></p>
+
+                                    <p style="line-height: 20.8px;">For customer support, please contact&nbsp;<a href="mailto:support@charity.org">support@charity.org</a></p>
+
+                                    <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div> 
+          </div>
+    </div><br>
+    
+    <div class="row" style="margin:20px;">
+        <div class="col-sm-6 " >
+          <h2 >List of countries around the world</h2>
+          <ul class="list-group" >
+                <li id="TheWorld" class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#world">Charities Around The World <span class="caret"></span></li>
+
+                <div class="list-group collapse" id="world" class="collapse">
+
+                     <li class="list-group-item list-group-item-info" data-toggle="collapse" data-target="#aa">A <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="aa">
+
+                         <a href="#" class="list-group-item list-group-item-info">Afghanistan</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Albania</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Algeria</a>
+                        <a href="#" class="list-group-item list-group-item-success">Andorra</a>
+                        <a href="#" class="list-group-item list-group-item-info">Angola</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Antigua and Barbuda</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Argentina</a>
+                        <a href="#" class="list-group-item list-group-item-success">Armenia</a>
+                        <a href="#" class="list-group-item list-group-item-info">Aruba</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Australia</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Austria</a>
+                        <a href="#" class="list-group-item list-group-item-success">Azerbaijan</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-warning" data-toggle="collapse" data-target="#bb">B <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="bb">
+
+                         <a href="#" class="list-group-item list-group-item-success">Bahamas, The</a>
+                        <a href="#" class="list-group-item list-group-item-info">Bahrain</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Bangladesh</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Barbados</a>
+                        <a href="#" class="list-group-item list-group-item-success">Belarus</a>
+                        <a href="#" class="list-group-item list-group-item-info">Belgium</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Belize</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Benin</a>
+                        <a href="#" class="list-group-item list-group-item-success">Bhutan</a>
+                        <a href="#" class="list-group-item list-group-item-info">Bolivia</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Bosnia and Herzegovina</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Botswana</a>
+                        <a href="#" class="list-group-item list-group-item-success">Brazil</a>
+                        <a href="#" class="list-group-item list-group-item-info">Brunei</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Bulgaria</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Burkina Faso</a>
+                        <a href="#" class="list-group-item list-group-item-success">Burma</a>
+                        <a href="#" class="list-group-item list-group-item-info">Burundi</a>
+
+                    </div>
+
+                     <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#cc">C <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="cc">
+
+                         <a href="#" class="list-group-item list-group-item-success">Cambodia</a>
+                        <a href="#" class="list-group-item list-group-item-info">Cameroon</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Canada</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Cabo Verde</a>
+                        <a href="#" class="list-group-item list-group-item-success">Central African Republic</a>
+                        <a href="#" class="list-group-item list-group-item-info">Chad</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Chile</a>
+                        <a href="#" class="list-group-item list-group-item-danger">China</a>
+                        <a href="#" class="list-group-item list-group-item-success">Colombia</a>
+                        <a href="#" class="list-group-item list-group-item-info">Comoros</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Congo, Democratic Republic of the</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Congo, Republic of the</a>
+                        <a href="#" class="list-group-item list-group-item-success">Costa Rica</a>
+                        <a href="#" class="list-group-item list-group-item-info">Cote d'Ivoire</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Croatia</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Cuba</a>
+                        <a href="#" class="list-group-item list-group-item-success">Curacao</a>
+                        <a href="#" class="list-group-item list-group-item-info">Cyprus</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Czechia</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#dd">D <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="dd">
+
+                         <a href="#" class="list-group-item list-group-item-success">Denmark</a>
+                        <a href="#" class="list-group-item list-group-item-info">Djibouti</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Dominica</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Dominican Republic</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-info" data-toggle="collapse" data-target="#ee">E <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="ee">
+
+                        <a href="#" class="list-group-item list-group-item-success">East Timor (see Timor-Leste)</a>
+                        <a href="#" class="list-group-item list-group-item-info">Ecuador</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Egypt</a>
+                        <a href="#" class="list-group-item list-group-item-danger">El Salvador</a>
+                        <a href="#" class="list-group-item list-group-item-success">Equatorial Guinea</a>
+                        <a href="#" class="list-group-item list-group-item-info">Eritrea</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Estonia</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Ethiopia</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-warning" data-toggle="collapse" data-target="#ff">F <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="ff">
+
+                        <a href="#" class="list-group-item list-group-item-success">Fiji</a>
+                        <a href="#" class="list-group-item list-group-item-info">Finland</a>
+                        <a href="#" class="list-group-item list-group-item-warning">France</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#gg">G <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="gg">
+
+                         <a href="#" class="list-group-item list-group-item-success">Gabon</a>
+                        <a href="#" class="list-group-item list-group-item-info">Gambia, The</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Georgia</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Germany</a>
+                        <a href="#" class="list-group-item list-group-item-success">Ghana</a>
+                        <a href="#" class="list-group-item list-group-item-info">Greece</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Grenada</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Guatemala</a>
+                        <a href="#" class="list-group-item list-group-item-success">Guinea</a>
+                        <a href="#" class="list-group-item list-group-item-info">Guinea-Bissau</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Guyana</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#hh">H <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="hh">
+
+                         <a href="#" class="list-group-item list-group-item-success">Haiti</a>
+                        <a href="#" class="list-group-item list-group-item-info">Holy See</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Honduras</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Hong Kong</a>
+                        <a href="#" class="list-group-item list-group-item-success">Hungary</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-info" data-toggle="collapse" data-target="#ii">I <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="ii">
+
+                         <a href="#" class="list-group-item list-group-item-warning">Iceland</a>
+                        <a href="#" class="list-group-item list-group-item-success">India</a>
+                        <a href="#" class="list-group-item list-group-item-info">Indonesia</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Iran</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Iraq</a>
+                        <a href="#" class="list-group-item list-group-item-success">Ireland</a>
+                        <a href="#" class="list-group-item list-group-item-info">Israel</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Italy</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-warning" data-toggle="collapse" data-target="#jj">J <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="jj">
+
+                        <a href="#" class="list-group-item list-group-item-success">Jamaica</a>
+                        <a href="#" class="list-group-item list-group-item-info">Japan</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Jordan</a>
+
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#kk">K <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="kk">
+
+                        <a href="#" class="list-group-item list-group-item-success">Kazakhstan</a>
+                        <a href="#" class="list-group-item list-group-item-info">Kenya</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Kiribati</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Korea, North</a>
+                        <a href="#" class="list-group-item list-group-item-success">Korea, South</a>
+                        <a href="#" class="list-group-item list-group-item-info">Kosovo</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Kuwait</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Kyrgyzstan</a> 
+
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#ll">L <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="ll" >
+
+                         <a href="#" class="list-group-item list-group-item-info">Laos</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Latvia</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Lebanon</a>
+                        <a href="#" class="list-group-item list-group-item-success">Lesotho</a>
+                        <a href="#" class="list-group-item list-group-item-info">Liberia</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Libya</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Liechtenstein</a>
+                        <a href="#" class="list-group-item list-group-item-success">Lithuania</a>
+                        <a href="#" class="list-group-item list-group-item-info">Luxembourg</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-info" data-toggle="collapse" data-target="#mm">M <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="mm">
+
+                         <a href="#" class="list-group-item list-group-item-warning">Macau</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Macedonia</a>
+                        <a href="#" class="list-group-item list-group-item-info">Madagascar</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Malawi</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Malaysia</a>
+                        <a href="#" class="list-group-item list-group-item-success">Maldives</a>
+                        <a href="#" class="list-group-item list-group-item-info">Mali</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Malta</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Marshall Islands</a>
+                        <a href="#" class="list-group-item list-group-item-success">Mauritania</a>
+                        <a href="#" class="list-group-item list-group-item-info">Mauritius</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Mexico</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Micronesia</a>
+                        <a href="#" class="list-group-item list-group-item-success">Moldova</a>
+                        <a href="#" class="list-group-item list-group-item-info">Monaco</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Mongolia</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Montenegro</a>
+                        <a href="#" class="list-group-item list-group-item-success">Morocco</a>
+                        <a href="#" class="list-group-item list-group-item-info">Mozambique</a>
+
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-warning" data-toggle="collapse" data-target="#nn">N <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="nn">
+
+                        <a href="#" class="list-group-item list-group-item-danger">Namibia</a>
+                        <a href="#" class="list-group-item list-group-item-success">Nauru</a>
+                        <a href="#" class="list-group-item list-group-item-info">Nepal</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Netherlands</a>
+                        <a href="#" class="list-group-item list-group-item-danger">New Zealand</a>
+                        <a href="#" class="list-group-item list-group-item-success">Nicaragua</a>
+                        <a href="#" class="list-group-item list-group-item-info">Niger</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Nigeria</a>
+                        <a href="#" class="list-group-item list-group-item-danger">North Korea</a>
+                        <a href="#" class="list-group-item list-group-item-success">Norway</a>
+
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#oo">O <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="oo">
+
+                       <a href="#" class="list-group-item list-group-item-success">Oman</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#pp">P <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="pp">
+
+                         <a href="#" class="list-group-item list-group-item-success">Pakistan</a>
+                        <a href="#" class="list-group-item list-group-item-info">Palau</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Palestinian Territories</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Panama</a>
+                        <a href="#" class="list-group-item list-group-item-success">Papua New Guinea</a>
+                        <a href="#" class="list-group-item list-group-item-info">Paraguay</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Peru</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Philippines</a>
+                        <a href="#" class="list-group-item list-group-item-success">Poland</a>
+                        <a href="#" class="list-group-item list-group-item-info">Portugal</a>
+
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-info" data-toggle="collapse" data-target="#qq">Q <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="qq">
+
+                       <a href="#" class="list-group-item list-group-item-success">Qatar</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-warning" data-toggle="collapse" data-target="#rr">R <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="rr">
+
+                         <a href="#" class="list-group-item list-group-item-success">Romania</a>
+                        <a href="#" class="list-group-item list-group-item-info">Russia</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Rwanda</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#ss">S <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="ss">
+
+                         <a href="#" class="list-group-item list-group-item-danger">Saint Kitts and Nevis</a>
+                        <a href="#" class="list-group-item list-group-item-success">Saint Lucia</a>
+                        <a href="#" class="list-group-item list-group-item-info">Saint Vincent and the Grenadines</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Samoa</a>
+                        <a href="#" class="list-group-item list-group-item-danger">San Marino</a>
+                        <a href="#" class="list-group-item list-group-item-success">Sao Tome and Principe</a>
+                        <a href="#" class="list-group-item list-group-item-info">Saudi Arabia</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Senegal</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Serbia</a>
+                        <a href="#" class="list-group-item list-group-item-info">Seychelles</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Sierra Leone</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Singapore</a>
+                        <a href="#" class="list-group-item list-group-item-success">Sint Maarten</a>
+                        <a href="#" class="list-group-item list-group-item-info">Slovakia</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Slovenia</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Solomon Islands</a>
+                        <a href="#" class="list-group-item list-group-item-success">Somalia</a>
+                        <a href="#" class="list-group-item list-group-item-info">South Africa</a>
+                        <a href="#" class="list-group-item list-group-item-warning">South Korea</a>
+                        <a href="#" class="list-group-item list-group-item-danger">South Sudan</a>
+                        <a href="#" class="list-group-item list-group-item-success">Spain</a>
+                        <a href="#" class="list-group-item list-group-item-info">Sri Lanka</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Sudan</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Suriname</a>
+                        <a href="#" class="list-group-item list-group-item-success">Swaziland</a>
+                        <a href="#" class="list-group-item list-group-item-info">Sweden</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Switzerland</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Syria</a>
+
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#tt">T <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="tt">
+
+                         <a href="#" class="list-group-item list-group-item-info">Taiwan</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Tajikistan</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Tanzania</a>
+                        <a href="#" class="list-group-item list-group-item-success">Thailand</a>
+                        <a href="#" class="list-group-item list-group-item-info">Timor-Leste</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Togo</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Tonga</a>
+                        <a href="#" class="list-group-item list-group-item-success">Trinidad and Tobago</a>
+                        <a href="#" class="list-group-item list-group-item-info">Tunisia</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Turkey</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Turkmenistan</a>
+                        <a href="#" class="list-group-item list-group-item-success">Tuvalu</a>
+
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-info" data-toggle="collapse" data-target="#uu">U <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="uu">
+
+                         <a href="#" class="list-group-item list-group-item-warning">Uganda</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Ukraine</a>
+                        <a href="#" class="list-group-item list-group-item-success">United Arab Emirates</a>
+                        <a href="#" class="list-group-item list-group-item-info">United Kingdom</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Uruguay</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Uzbekistan</a>
+
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-warning" data-toggle="collapse" data-target="#vv">V <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="vv">
+
+                        <a href="#" class="list-group-item list-group-item-info">Vanuatu</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Venezuela</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Vietnam</a>
+
+
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#yy">Y <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="yy">
+
+                      <a href="#" class="list-group-item list-group-item-success">Yemen</a>
+
+                    </div>
+
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#zz">Z <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="zz">
+
+                        <a href="#" class="list-group-item list-group-item-info">Zambia</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Zimbabwe</a>
+
+
+                    </div>
+
+                </div>
+
+          </ul>
+        </div>
+        <div class="col-sm-6 ">
+            <h2 >List of United State cities</h2>
+            <ul class="list-group" >
+                <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#cities">Charities Around The World <span class="caret"></span></li>
+
+                <div class="list-group collapse" id="cities">
+
+                    <li class="list-group-item list-group-item-info" data-toggle="collapse" data-target="#aaa">A <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="aaa">
+
+                         <a href="#" class="list-group-item list-group-item-info">Alabama</a>
+                        <a href="#" class="list-group-item list-group-item-warning"> Alaska</a>
+                            <a href="#" class="list-group-item list-group-item-danger">Arizona</a>
+                        <a href="#" class="list-group-item list-group-item-success">Arkansas</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#ccc">C <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="ccc">
+
+                         <a href="#" class="list-group-item list-group-item-success"> California</a>
+                        <a href="#" class="list-group-item list-group-item-info">Carolina</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Colorado</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Connecticut</a>
+
+                    </div>
+
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#ddd">D <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="ddd">
+
+                         <a href="#" class="list-group-item list-group-item-success">Denmark</a>
+                        <a href="#" class="list-group-item list-group-item-info">Djibouti</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Dominica</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Dominican Republic</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-warning" data-toggle="collapse" data-target="#fff">F <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="fff">
+
+                        <a href="#" class="list-group-item list-group-item-success">Florida</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#ggg">G <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="ggg">
+
+                         <a href="#" class="list-group-item list-group-item-success">Georgia</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#hhh">H <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="hhh">
+
+                         <a href="#" class="list-group-item list-group-item-success">Hawaii</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-info" data-toggle="collapse" data-target="#iii">I <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="iii">
+
+                         <a href="#" class="list-group-item list-group-item-warning">Idaho</a>
+                        <a href="#" class="list-group-item list-group-item-success">Illinois</a>
+                        <a href="#" class="list-group-item list-group-item-info">Indiana</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Iowa</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#kkk">K <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="kkk">
+
+                        <a href="#" class="list-group-item list-group-item-success">Kansas</a>
+                        <a href="#" class="list-group-item list-group-item-info">Kentucky</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#lll">L <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="lll">
+
+                         <a href="#" class="list-group-item list-group-item-info">Louisiana</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-info" data-toggle="collapse" data-target="#mmm">M <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="mmm">
+
+                         <a href="#" class="list-group-item list-group-item-warning">Maine</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Maryland</a>
+                        <a href="#" class="list-group-item list-group-item-info"> Massachusetts</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Maui</a>
+                        <a href="#" class="list-group-item list-group-item-danger"> Michigan</a>
+                        <a href="#" class="list-group-item list-group-item-success">Minnesota</a>
+                        <a href="#" class="list-group-item list-group-item-info">Mississippi</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Missouri</a>
+                        <a href="#" class="list-group-item list-group-item-danger">Montana</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-warning" data-toggle="collapse" data-target="#nnn">N <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="nnn">
+
+                        <a href="#" class="list-group-item list-group-item-danger">Nebraska</a>
+                        <a href="#" class="list-group-item list-group-item-success">Nevada</a>
+                        <a href="#" class="list-group-item list-group-item-info">New Hampshire</a>
+                        <a href="#" class="list-group-item list-group-item-warning">New Jersey</a>
+                        <a href="#" class="list-group-item list-group-item-danger">New Mexico</a>
+                        <a href="#" class="list-group-item list-group-item-success">New York</a>
+                        <a href="#" class="list-group-item list-group-item-info">North Carolina</a>
+                        <a href="#" class="list-group-item list-group-item-warning">North Dakota</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#ooo">O <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="ooo">
+
+                         <a href="#" class="list-group-item list-group-item-success"> Ohio</a>
+                         <a href="#" class="list-group-item list-group-item-success">Oklahoma</a>
+                         <a href="#" class="list-group-item list-group-item-success">Oregon</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#ppp">P <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="ppp">
+
+                         <a href="#" class="list-group-item list-group-item-success">Pennsylvania</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-warning" data-toggle="collapse" data-target="#rrr">R <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="rrr">
+
+                         <a href="#" class="list-group-item list-group-item-success">Rhode Island</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-danger" data-toggle="collapse" data-target="#sss">S <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="sss">
+
+                         <a href="#" class="list-group-item list-group-item-danger">South Carolina</a>
+                        <a href="#" class="list-group-item list-group-item-success">South Dakota</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#ttt">T <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="ttt">
+
+                         <a href="#" class="list-group-item list-group-item-info">Tennessee</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Texas</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-info" data-toggle="collapse" data-target="#uuu">U <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="uuu">
+
+                         <a href="#" class="list-group-item list-group-item-warning">Utah</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-warning" data-toggle="collapse" data-target="#vvv">V <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="vvv">
+
+                        <a href="#" class="list-group-item list-group-item-info"> Vermont</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Virginia</a>
+
+                    </div>
+
+                    <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#www">W <span class="caret"></span></li>
+
+                    <div  class="list-group collapse" id="www">
+
+                        <a href="#" class="list-group-item list-group-item-info">Washington</a>
+                        <a href="#" class="list-group-item list-group-item-warning">West Virginia</a>
+                        <a href="#" class="list-group-item list-group-item-info">Wisconsin</a>
+                        <a href="#" class="list-group-item list-group-item-warning">Wyoming</a>    
+
+
+                    </div>
+
+                </div>
+
+           </ul>
+        </div>
+   
+    </div>
+
+<footer class="container-fluid">
+   <div class="navbar-header">
+      <button id="foter" type="button" class="navbar-toggle btn-block btn-primary" data-toggle="collapse" data-target="#myFooter" style=" color: #000; background:#7FFFD4; margin:auto;border:none;" onclick="changeColor(this)">
+        <span class="glyphicon glyphicon-list"></span>&nbsp;Footer                         
+      </button>
+   </div>
+        
+    <div class="collapse navbar-collapse" id="myFooter">
+         <div class="row " style="padding-left:100px;">
+            <div class="col-sm-3 text-justify" >
+                <h3>Charities</h3><br> 
+                <p><a href="http://www.charity-charities.org/charities/index.html">Find A Charity</a></p>
+                <p><a href="http://www.charity-charities.org/volunteering/index.html">Volunteer</a></p>
+                <p><a href="http://101resort.com/">101 Resort</a></p>
+                <p><a href="http://www.charity-charities.org/ActionAlertCenter.html">Action Center</a></p>
+                <p><a href="http://www.charity-charities.org/add.php">Add A Site</a></p>
+            </div>
+            <div class="col-sm-3 text-justify">
+                <h3>News</h3><br> 
+                <p><a href="http://www.charity-charities.org/news/international-world/index.php">World</a></p>
+                <p><a href="http://www.charity-charities.org/news/environmental/index.php">Environment</a></p>
+                <p><a href="http://www.charity-charities.org/news/health-medical/index.php">Health</a></p>
+                <p><a href="http://www.charity-charities.org/news/community-services/index.php">Community</a></p>
+                <p><a href="http://www.charity-charities.org/news/animals-wildlife/index.php">Animals</a></p>
+                <p><a href="http://www.charity-charities.org/news/celebrities-celebrity/index.php">Celebrity</a></p>
+
+            </div>
+            <div class="col-sm-3 text-justify">
+                <h3>Follow Us</h3><br> 
+                <p><a href="https://www.facebook.com/charityvault">Facebook</a></p>
+                <p><a href="https://plus.google.com/105618789135396547976">Google+</a></p>
+                <p><a href="https://twitter.com/charityvault">Twitter</a></p>
+
+
+            </div>
+             <div class="col-sm-3 text-justify">
+                 <h3>Support</h3><br> 
+                <p><a href="http://www.charity-charities.org/privacy.htm">	Privacy Policy</a></p>
+                <p><a href="http://www.charity-charities.org/terms.htm">Terms of Service</a></p>
+                <p><a href="http://www.charity-charities.org/contact.php">Contact</a></p>
+                <p><a href="http://www.charity-charities.org/copyright.htm"> &copy; &nbsp;Copyright</a></p>
+
+
+            </div>
+        </div>
+        <div class="row text-center well" id="wel" >
+            <div class="col-sm-2">
+                <h5><a href="http://www.charity-charities.org/sp/ngos-caridades/index.html">Espanol</a></h5>
+            </div>
+            <div class="col-sm-2">
+                <h5><a href="http://www.charity-charities.org/ge/Deutschland-nachstenliebe/Deutschland.html">Deutsch</a></h5>
+            </div>
+            <div class="col-sm-2">
+                <h5><a href="http://www.charity-charities.org/fr/France-charites/France.html">Francais</a></h5>
+            </div>
+            <div class="col-sm-2">
+                <h5><a href="http://www.charity-charities.org/it/Italia-ngos/Italia.html">Italiano</a></h5>
+            </div>
+            <div class="col-sm-2">
+                <h5><a href="http://www.charity-charities.org/po/Brasil-daridades/Brasil.html">Portugues</a></h5>
+            </div>
+            <div class="col-sm-2">
+                <h5><a href="http://www.charity-charities.org/du/Nederland-ngos/Nederland.html">Dutch</a></h5>
+            </div>
+
+        </div>
+    </div>       
+    
+</footer>
+
+    <script src = "js/pageCode.js"></script>
+    
+</body>
+</html>
