@@ -43,9 +43,17 @@
     }
     /* Add a gray background color and some padding to the footer */
     footer {
-      background-color: #f2f2f2;
+      background-color: #333;
       padding: 25px;
     }
+      footer a{
+          color: #fff;
+      }  
+      footer a:hover a{
+          text-decoration: none;
+          color: #fff;
+
+      }  
     
      .col-sm-3 > a {
           text-decoration: none;
@@ -61,11 +69,11 @@
     }
       
       .list-group > li {
-			background-repeat: no-repeat;
-			background-position: center right;
-			margin: 10px;
-			padding: 5px;
-		}
+      background-repeat: no-repeat;
+      background-position: center right;
+      margin: 10px;
+      padding: 5px;
+    }
 
     /* Hide the carousel text when the screen is less than 600 pixels wide */
     @media (max-width: 600px) {
@@ -86,23 +94,26 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
               </button>
-              <a class="nav navbar-nav" href="donate.html" ><img src="image/charity.jpeg" style="height:60px;width:100px;color:#555; margin-top:px; margin-right:5px;"></a>
+              <a class="nav navbar-nav" href="donate.html" ><img src="image/charity.jpeg" style="height:60px;width:100px;color:#555; margin:0px;padding:0px;"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
             <li class="active"><a href="http://www.charity-charities.org/index.htm"><span class="glyphicon glyphicon-home"></span> Home</a></li>
             <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="http://www.charity-charities.org/add.php">ADD A CHARITY <span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="http://www.charity-charities.org/add.php"> CHARITIES <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="http://www.charity-charities.org/add.php">Submit A Site	</a></li>
+              <li><a href="http://www.charity-charities.org/add.php">Submit A Site  </a></li>
             <li><a href="http://www.charity-charities.org/charities/index.html">Find A Charity</a></li>
+            <li><a href="http://www.charity-charities.org/volunteering/index.html">VOLUNTEER</a></li>    
             </ul>
             </li>
-            <li><a href="http://www.charity-charities.org/ActionAlertCenter.html">ACTION CENTER</a></li>
-            <li><a href="http://www.charity-charities.org/volunteering/index.html">VOLUNTEER</a></li>
-            
             <li><a href="http://www.charity-charities.org/contact.php">CONTACT</a></li>
-            <li><a href="http://www.charity-charities.org/support.htm">SUPPORT</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="http://www.charity-charities.org/support.htm">SUPPORT<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="http://www.charity-charities.org/support.htm">SUPPORT US</a></li>
+                    <li><a href="http://www.charity-charities.org/ActionAlertCenter.html">ACTION CENTER</a></li>
+                </ul>
+            </li>
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="http://www.charity-charities.org/news/index.php">NEWS <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -111,20 +122,20 @@
             <li><a href="http://www.charity-charities.org/news/community-services/index.php">Community</a></li>
             <li><a href="http://www.charity-charities.org/news/health-medical/index.php">Health</a></li>
             <li><a href="http://www.charity-charities.org/news/animals-wildlife/index.php">Animals</a></li>
-            <li><a href="http://www.charity-charities.org/news/celebrities-celebrity/index.php">People	</a></li>
+            <li><a href="http://www.charity-charities.org/news/celebrities-celebrity/index.php">People  </a></li>
 
             </ul> 
             </li>    
         </ul>
         <ul class="nav navbar-nav navbar-right" style="margin-top:12px;">
-                <li ><button class="btn btn-sm" style="margin-right:10px;background:#000; color:#fff;" type="button" onclick="loginfo(this)"><span class="glyphicon glyphicon-user" ></span> Sign Up</button></li>
+                <li ><button class="btn btn-sm" style="margin-right:2px;background:#000; color:#fff;" type="button" onclick="loginfo(this)"><span class="glyphicon glyphicon-user" ></span> Sign Up</button></li>
                 <li>
-            <button class="btn  btn-sm" style="margin-right:10px;background:#000; color:#fff;"
+            <button class="btn  btn-sm" style="margin-right:2px;background:#000; color:#fff;"
   id="signing" type="button" onclick="loginIn(this)"><span class="glyphicon glyphicon-log-in" ></span> Login</button></li>
         </ul>
         <ul>
             
-            <div class="dropdown navbar-right" style="margin:12px;">
+            <div class="dropdown navbar-right" style="margin:12px; margin-right:2px;">
                   <button class="btn  btn-sm dropdown-toggle" type="button" data-toggle="dropdown" style="background:#000;color:#fff;">Language
                   <span class="caret"></span></button>
                   <ul class="dropdown-menu">
@@ -225,14 +236,13 @@
                         <input id="username" type="userId" class="form-control" name="userId" placeholder="User Name" required autofocus><br>
 
                         <label for="password" class="sr-only">Password:</label>
-                        <input type="password" class="form-control" name="password" placeholder="Password" required><br>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Password" required><br>
                         <label>
-                            <input type="checkbox" value="remember-me"> Remember me 
-                        </label>  
-                  </div>
+                            <input type="checkbox" value="remember-me" onclick="remember(this)"> Remember me 
+                        </label>
+                 </div>
                     <input  type="button" class="btn btn-lg btn-primary btn-block" id="sign" onclick="check(this.form)" value="Sign in" />
                 </form><br>
-
              </div>
         </div>
       </div>
@@ -397,7 +407,7 @@
         <div class="col-sm-6 " >
           <h2 >List of countries around the world</h2>
           <ul class="list-group" >
-                <li id="TheWorld" class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#world">Charities Around The World <span class="caret"></span></li>
+                <li id="wordnames" class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#world" onmouseover="displayText(this)" onmouseout="hideText(this)">Charities Around The World </li>
 
                 <div class="list-group collapse" id="world" class="collapse">
 
@@ -792,7 +802,7 @@
         <div class="col-sm-6 ">
             <h2 >List of United State cities</h2>
             <ul class="list-group" >
-                <li class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#cities">Charities Around The World <span class="caret"></span></li>
+                <li id="citiesnames" class="list-group-item list-group-item-success" data-toggle="collapse" data-target="#cities" onmouseover="displayT(this)" onmouseout="hideT(this)">Charities Around The United States </li>
 
                 <div class="list-group collapse" id="cities">
 
@@ -993,9 +1003,9 @@
    
     </div>
 
-<footer class="container-fluid">
+<footer class="container-fluid" style="background: #333;color:#fff;">
    <div class="navbar-header">
-      <button id="foter" type="button" class="navbar-toggle btn-block btn-primary" data-toggle="collapse" data-target="#myFooter" style=" color: #000; background:#7FFFD4; margin:auto;border:none;" onclick="changeColor(this)">
+      <button id="foter" type="button" class="navbar-toggle btn-block btn-primary" data-toggle="collapse" data-target="#myFooter" style="padding:0px; color: #fff; background:#000; margin:0px;border:none;" onclick="changeColor(this)">
         <span class="glyphicon glyphicon-list"></span>&nbsp;Footer                         
       </button>
    </div>
@@ -1003,63 +1013,66 @@
     <div class="collapse navbar-collapse" id="myFooter">
          <div class="row " style="padding-left:100px;">
             <div class="col-sm-3 text-justify" >
-                <h3>Charities</h3><br> 
+                <h4 data-toggle="collapse" data-target="#charity">Charities&nbsp;<span class="caret"></span></h4><br> 
+                <div class="collapse" id="charity">
                 <p><a href="http://www.charity-charities.org/charities/index.html">Find A Charity</a></p>
                 <p><a href="http://www.charity-charities.org/volunteering/index.html">Volunteer</a></p>
                 <p><a href="http://101resort.com/">101 Resort</a></p>
                 <p><a href="http://www.charity-charities.org/ActionAlertCenter.html">Action Center</a></p>
                 <p><a href="http://www.charity-charities.org/add.php">Add A Site</a></p>
+             </div>
             </div>
             <div class="col-sm-3 text-justify">
-                <h3>News</h3><br> 
+                <h4 data-toggle="collapse" data-target="#news">News&nbsp;<span class="caret"></span></h4><br> 
+            <div class="collapse" id="news">
                 <p><a href="http://www.charity-charities.org/news/international-world/index.php">World</a></p>
                 <p><a href="http://www.charity-charities.org/news/environmental/index.php">Environment</a></p>
                 <p><a href="http://www.charity-charities.org/news/health-medical/index.php">Health</a></p>
                 <p><a href="http://www.charity-charities.org/news/community-services/index.php">Community</a></p>
                 <p><a href="http://www.charity-charities.org/news/animals-wildlife/index.php">Animals</a></p>
                 <p><a href="http://www.charity-charities.org/news/celebrities-celebrity/index.php">Celebrity</a></p>
+            </div>    
 
             </div>
             <div class="col-sm-3 text-justify">
-                <h3>Follow Us</h3><br> 
+                <h4 data-toggle="collapse" data-target="#follow">Follow Us&nbsp;<span class="caret"></span></h4><br>
+                <div class="collapse" id="follow">
                 <p><a href="https://www.facebook.com/charityvault">Facebook</a></p>
                 <p><a href="https://plus.google.com/105618789135396547976">Google+</a></p>
                 <p><a href="https://twitter.com/charityvault">Twitter</a></p>
-
+             </div>
 
             </div>
              <div class="col-sm-3 text-justify">
-                 <h3>Support</h3><br> 
-                <p><a href="http://www.charity-charities.org/privacy.htm">	Privacy Policy</a></p>
+                 <h4 data-toggle="collapse" data-target="#support">Support&nbsp;<span class="caret"></span></h4><br> 
+                 <div class="collapse" id="support">
+                <p><a href="http://www.charity-charities.org/privacy.htm">  Privacy Policy</a></p>
                 <p><a href="http://www.charity-charities.org/terms.htm">Terms of Service</a></p>
                 <p><a href="http://www.charity-charities.org/contact.php">Contact</a></p>
                 <p><a href="http://www.charity-charities.org/copyright.htm"> &copy; &nbsp;Copyright</a></p>
+                </div>
 
 
             </div>
         </div>
-        <div class="row text-center well" id="wel" >
-            <div class="col-sm-2">
-                <h5><a href="http://www.charity-charities.org/sp/ngos-caridades/index.html">Espanol</a></h5>
-            </div>
-            <div class="col-sm-2">
-                <h5><a href="http://www.charity-charities.org/ge/Deutschland-nachstenliebe/Deutschland.html">Deutsch</a></h5>
-            </div>
-            <div class="col-sm-2">
-                <h5><a href="http://www.charity-charities.org/fr/France-charites/France.html">Francais</a></h5>
-            </div>
-            <div class="col-sm-2">
-                <h5><a href="http://www.charity-charities.org/it/Italia-ngos/Italia.html">Italiano</a></h5>
-            </div>
-            <div class="col-sm-2">
-                <h5><a href="http://www.charity-charities.org/po/Brasil-daridades/Brasil.html">Portugues</a></h5>
-            </div>
-            <div class="col-sm-2">
-                <h5><a href="http://www.charity-charities.org/du/Nederland-ngos/Nederland.html">Dutch</a></h5>
-            </div>
-
+    </div> 
+        <div class="hide">
+                         <div>
+                            <h4>users just loged on:</h4>
+                            <ul id="loggedins"></ul>
+                        </div>
+                        <hr>
+                        <div>
+                            <h4>users Archives:</h4>
+                            <table class="table-bordered" id="savedusers">
+                                <tr>
+                                    <th>UserName</th>
+                                    <th></th>
+                                    <th>Password</th>
+                                </tr>
+                            </table>
+                        </div>
         </div>
-    </div>       
     
 </footer>
 
