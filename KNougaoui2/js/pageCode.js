@@ -203,71 +203,69 @@ function check(form){
 }
 
 // local Storage
-if(localStorage.getItem("userlist") == null){
-    userlist = [];
-  } else{
-    userlist = JSON.parse(localStorage.getItem("userlist"));
-  }
+// if(localStorage.getItem("userlist") == null){
+//     userlist = [];
+//   } else{
+//     userlist = JSON.parse(localStorage.getItem("userlist"));
+//   }
 
-  for (u = 0; u < userlist.length; u++){
-    t1 = JSON.parse(localStorage.getItem("userlist"))[u].username;
-    t2 = JSON.parse(localStorage.getItem("userlist"))[u].password;
-    var table = document.getElementById("savedusers");
-    var tr = document.createElement("tr");
-    tr.className = "row";
-    tr.innerHTML = '<td>' + u1 + '</td><td>' + u2 + '</td>';
-    table.appendChild(tr);
-    console.log(userlist.length,u,u1,u2);
-  }
+//   for (u = 0; u < userlist.length; u++){
+//     t1 = JSON.parse(localStorage.getItem("userlist"))[u].username;
+//     t2 = JSON.parse(localStorage.getItem("userlist"))[u].password;
+//     var table = document.getElementById("savedusers");
+//     var tr = document.createElement("tr");
+//     tr.className = "row";
+//     tr.innerHTML = '<td>' + u1 + '</td><td>' + u2 + '</td>';
+//     table.appendChild(tr);
+//     console.log(userlist.length,u,u1,u2);
+//   }
 
-  function users( username , password ){
-    this.username = username;
-    this.password = password;
-    var loggedins = document.getElementById("loggedins");
-    var li = document.createElement("li");
-    if (username == 'khalil'){
-      li.innerHTML = this.password + ', ' + this.username + '<br>this an admin';
-    } else if (password == 'Thor' || password == 'Captain America' || name == 'Black Widow'){
-      li.innerHTML = this.password + ' is an avenger';
-    } else {
-      li.innerHTML = this.username+'<br>'+this.password;
-    }
-    loggedins.appendChild(li);
+//   function users( username , password ){
+//     this.username = username;
+//     this.password = password;
+//     var loggedins = document.getElementById("loggedins");
+//     var li = document.createElement("li");
+//     if (username == 'khalil'){
+//       li.innerHTML = this.password + ', ' + this.username + '<br>this an admin';
+//     } else if (password == 'Thor' || password == 'Captain America' || name == 'Black Widow'){
+//       li.innerHTML = this.password + ' is an avenger';
+//     } else {
+//       li.innerHTML = this.username+'<br>'+this.password;
+//     }
+//     loggedins.appendChild(li);
 
-    userlog = {};
-    userlog['Password'] = password;
-    userlog['username'] = username;
+//     userlog = {};
+//     userlog['Password'] = password;
+//     userlog['username'] = username;
 
-    checklist = [];
+//     checklist = [];
 
-    for (idh = 0; idh < userlist.length; ++idh){
-      checklist.push(userlist[idh].hero);
-    }
+//     for (idh = 0; idh < userlist.length; ++idh){
+//       checklist.push(userlist[idh].hero);
+//     }
 
-    if (checklist.indexOf(password) == -1){
-      userlist.push(userlog);
-      localStorage.setItem("userlist", JSON.stringify(userlist));
+//     if (checklist.indexOf(password) == -1){
+//       userlist.push(userlog);
+//       localStorage.setItem("userlist", JSON.stringify(userlist));
 
-      var table = document.getElementById("savedusers");
-      var tr = document.createElement("tr");
-      tr.className = "row";
-      tr.innerHTML = '<td>' + username + '</td>&nbsp;<td>' + password + '</td>';
-      table.appendChild(tr);
+//       var table = document.getElementById("savedusers");
+//       var tr = document.createElement("tr");
+//       tr.className = "row";
+//       tr.innerHTML = '<td>' + username + '</td>&nbsp;<td>' + password + '</td>';
+//       table.appendChild(tr);
 
-      document.getElementById('password').value = '';
-      document.getElementById('username').value = '';
-    }
+//       document.getElementById('password').value = '';
+//       document.getElementById('username').value = '';
+//     }
 
-  };
+//   };
 
-  function remember(){
-    n = document.getElementById('password').value;
-    r = document.getElementById('username').value;
-    new users(r,n);
-  }
+//   function remember(){
+//     n = document.getElementById('password').value;
+//     r = document.getElementById('username').value;
+//     new users(r,n);
+//   }
 
-  new users('Peter Parker', 'Spider-Man');
-  new users('Logan', 'Wolverine');
 
 
 
